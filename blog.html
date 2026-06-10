@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <title>PBN 빌더로 LLM 비교하는 법 | 마포 블로그</title>
+    <meta name="description" content="LLM 비교를 쉽게 도와주는 PBN 빌더 사용법. 마포에서 직접 경험한 꿀팁과 솔직한 리뷰를 나눠요. 요즘 핫한 AI 모델들, 내 사이트에 딱 맞는 걸 골라보자구요.">
+    <meta name="keywords" content="PBN 빌더, LLM 비교, 마포, AI 모델 비교, 블로그 운영, SEO">
+    <link rel="canonical" href="https://sf-t3-1779642675702-171.vercel.app/">
+    <meta property="og:title" content="PBN 빌더로 LLM 비교하는 법 | 마포 블로그">
+    <meta property="og:description" content="LLM 비교를 쉽게 도와주는 PBN 빌더 사용법. 마포에서 직접 경험한 꿀팁과 솔직한 리뷰를 나눠요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-171.vercel.app/">
+    <meta property="og:image" content="https://sf-t3-1779642675702-171.vercel.app/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PBN 빌더로 LLM 비교하는 법 | 마포 블로그">
+    <meta name="twitter:description" content="LLM 비교를 쉽게 도와주는 PBN 빌더 사용법. 마포에서 직접 경험한 꿀팁과 솔직한 리뷰를 나눠요.">
+    <meta name="twitter:image" content="https://sf-t3-1779642675702-171.vercel.app/twitter-image.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PBN 빌더로 LLM 비교하는 법",
+        "description": "LLM 비교를 쉽게 도와주는 PBN 빌더 사용법. 마포에서 직접 경험한 꿀팁과 솔직한 리뷰를 나눠요.",
+        "author": {
+            "@type": "Person",
+            "name": "마포 블로거"
+        },
+        "datePublished": "2025-03-25",
+        "publisher": {
+            "@type": "Organization",
+            "name": "PBN 빌더"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://sf-t3-1779642675702-171.vercel.app/"
+        }
+    }
+    </script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 72px;
+        }
+
+        /* Sticky Nav */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #ffffff;
+            border-bottom: 1px solid #111111;
+            padding: 16px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            color: #111111;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #111111;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: 1px solid #111111;
+            padding: 8px 10px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: #111111;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            background-color: #ffffff;
+            border-bottom: 1px solid #111111;
+            padding: 24px 72px;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: #111111;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        /* Header / Hero */
+        header {
+            padding: 120px 0 72px;
+            border-bottom: 1px solid #111111;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #333;
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 14px 36px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            border-radius: 2px;
+            transition: opacity 0.2s ease;
+        }
+
+        .hero-cta:hover {
+            opacity: 0.85;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 4 / 3;
+            border: 1px solid #111111;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            font-size: 4rem;
+            position: relative;
+        }
+
+        .hero-visual span {
+            opacity: 0.8;
+        }
+
+        /* Section */
+        section {
+            padding: 120px 0;
+            border-bottom: 1px solid #111111;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 48px;
+            border-bottom: 1px solid #111111;
+            padding-bottom: 16px;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            display: grid;
+            gap: 48px;
+        }
+
+        .blog-content p {
+            font-size: 1.05rem;
+            color: #222;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .blog-content .highlight-box {
+            border: 1px solid #111111;
+            padding: 32px;
+            background-color: #fafafa;
+            margin: 24px 0;
+        }
+
+        .blog-content .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        .card {
+            border: 1px solid #111111;
+            padding: 32px;
+            transition: all 0.2s ease;
+            background-color: #ffffff;
+        }
+
+        .card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .card .card-meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 16px;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        /* UGC Review Cards */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        .review-card {
+            border: 1px solid #111111;
+            padding: 32px;
+            transition: all 0.2s ease;
+        }
+
+        .review-card:hover {
+            border-color: #2563eb;
+        }
+
+        .review-card .stars {
+            color: #2563eb;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .review-card blockquote {
+            font-style: normal;
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .review-card .review-author {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0 72px;
+            border-top: 1px solid #111111;
+            margin-top: 0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        footer .footer-left {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer .footer-right {
+            display: flex;
+            gap: 24px;
+            font-size: 0.9rem;
+        }
+
+        footer .footer-right a {
+            text-decoration: none;
+            color: #111111;
+            transition: opacity 0.2s ease;
+        }
+
+        footer .footer-right a:hover {
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                padding: 24px;
+            }
+
+            header {
+                padding: 72px 0 48px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-visual {
+                aspect-ratio: 16 / 9;
+            }
+
+            section {
+                padding: 72px 0;
+            }
+
+            .card-grid,
+            .review-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 32px;
+            }
+
+            footer .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .card,
+            .review-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-logo">PBN빌더</a>
+            <ul class="nav-links">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">LLM비교</a></li>
+                <li><a href="#">가이드</a></li>
+                <li><a href="#">문의</a></li>
+            </ul>
+            <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">LLM비교</a></li>
+            <li><a href="#">가이드</a></li>
+            <li><a href="#">문의</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>PBN 빌더로 LLM 비교하기</h1>
+                    <p>마포에서 직접 써본 후기. GPT, 클로드, 제미나이… 뭐가 다를까? 내 사이트에 딱 맞는 AI 모델을 PBN 빌더로 쉽게 골라보자.</p>
+                    <a href="tel:010-6279-0862" class="hero-cta">전화 상담 010-6279-0862</a>
+                </div>
+                <div class="hero-visual">
+                    <span>🤖⚡</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2 class="section-title">왜 PBN 빌더가 필요할까?</h2>
+                <div class="blog-content">
+                    <p>솔직히 말하면, 나도 처음엔 "PBN 빌더? 그냥 블로그나 잘 쓰면 되는 거 아냐?" 싶었어. 근데 막상 LLM 모델들 비교하려니까 머리가 아파오더라구. GPT는 글쓰기 좋고, 클로드는 코딩에 강하고, 제미나이는 뭔가 다재다능한데… 사이트마다 말이 달라서 헷갈렸거든.</p>
+                    <p>그래서 찾은 게 PBN 빌더야. 이거 하나면 여러 AI 모델의 결과물을 한눈에 비교할 수 있어. 마치 쇼핑몰에서 상품 비교하는 느낌? 진짜 편해. 내가 마포에서 카페에서 테스트해본 결과, 시간이 반으로 줄었어.</p>
+                    <div class="highlight-box">
+                        <p><strong>💡 꿀팁:</strong> PBN 빌더로 LLM 비교할 때는 같은 프롬프트를 입력해보는 게 제일 좋아. 그러면 누가 더 말을 잘 듣는지 바로 보여.</p>
+                    </div>
+                    <h3>어떻게 시작할까?</h3>
+                    <p>사실 별거 없어. 그냥 PBN 빌더에 접속해서 비교하고 싶은 모델을 선택하고, 질문을 던지면 끝. 나는 보통 블로그 초안 작성용으로 GPT랑 클로드를 자주 써. 근데 요새는 제미나이가 은근 괜찮더라? 특히 데이터 분석 쪽으로.</p>
+                    <p>전화로도 상담 가능하니까 궁금한 거 있으면 연락 줘. 010-6279-0862로 바로 통화할 수 있어.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">LLM 모델 한눈에 비교</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>GPT-4</h3>
+                        <p>글쓰기, 창의적인 작업에 강해. 블로그 포스팅이 필요하다면 일단 이거부터 써봐. 다만 가끔 너무 말이 많을 때도 있어.</p>
+                        <div class="card-meta">추천: 블로그 포스팅</div>
+                    </div>
+                    <div class="card">
+                        <h3>Claude 3</h3>
+                        <p>코딩과 논리적인 답변에 탁월해. 기술 블로그 쓰거나 코드 예제가 필요할 때 딱이야. 근데 한국어는 좀 어색할 때가 있더라.</p>
+                        <div class="card-meta">추천: 기술 문서</div>
+                    </div>
+                    <div class="card">
+                        <h3>Gemini</h3>
+                        <p>구글 생태계랑 찰떡. 다양한 정보를 종합해서 보여주는 능력이 좋아. 최근에 업데이트되면서 한국어도 많이 좋아졌어.</p>
+                        <div class="card-meta">추천: 데이터 분석</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">실제 사용자 후기</h2>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote>"PBN 빌더 덕분에 GPT랑 클로드 차이를 바로 알았어요. 블로그 작성 시간이 반으로 줄었네요. 강추!"</blockquote>
+                        <div class="review-author">
+                            <span>블로거킴</span>
+                            <span>2025.03.20</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★☆</div>
+                        <blockquote>"처음엔 어려울 줄 알았는데 생각보다 직관적이에요. 근데 모델별로 특성이 확실해서 고르는 재미가 있어요."</blockquote>
+                        <div class="review-author">
+                            <span>코딩하는주부</span>
+                            <span>2025.03.18</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote>"마포에서 개발하는데 진짜 유용해요. 제미나이랑 GPT 비교해서 프로젝트에 맞는 거 찾았어요. 감사합니다!"</blockquote>
+                        <div class="review-author">
+                            <span>마포개발자</span>
+                            <span>2025.03.15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">자주 묻는 질문</h2>
+                <div class="blog-content">
+                    <h3>PBN 빌더는 무료인가요?</h3>
+                    <p>기본 기능은 무료로 쓸 수 있어. 근데 좀 더 자세한 비교나 고급 기능을 원한다면 유료 플랜도 있어. 솔직히 무료만으로도 충분히 쓸 만해.</p>
+                    <h3>어떤 LLM이 제일 좋나요?</h3>
+                    <p>사람마다 달라. 나는 블로그용으로 GPT, 코딩용으로 클로드를 써. 네가 뭘 원하는지에 따라 추천이 달라지니까 한번 직접 비교해봐.</p>
+                    <h3>전화 상담도 가능한가요?</h3>
+                    <p>응, 당연하지! 010-6279-0862로 전화 주면 바로 받아. 궁금한 거 있으면 편하게 물어봐.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-left">
+                &copy; 2025 PBN 빌더. All rights reserved. | 마포
+            </div>
+            <div class="footer-right">
+                <a href="tel:010-6279-0862">010-6279-0862</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">이용약관</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+        });
+
+        // 메뉴 링크 클릭시 닫기
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
